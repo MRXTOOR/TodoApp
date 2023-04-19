@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.test_style {
+    text-align: center;
+    color: lightgrey;
+}
