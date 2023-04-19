@@ -8,4 +8,4 @@ from .models import Todo
 
 def index(request):
     todos = Todo.objects.all()
-    return render(request, 'todoapp/index.html', {'todolist':todos, 'title':'Главная страница'})
+    return render(request, 'todoapp/index.html', {'todo_list':todos, 'title':'Главная страница'})
