@@ -18,3 +18,15 @@ def add(request):
     todo.save()
     return redirect('index')
     
+
+def update(request,todo_id):
+    todo = Todo.objects.get(id=todo_id)
+    todo.is_complete = not todo.is_complete
+    todo.save()
+    return redirect('index')
+
+
+def delete(request,todo_id):
+    todo = Todo.objects.get(id=todo_id)
+    todo.delete()
+    return redirect('index')
