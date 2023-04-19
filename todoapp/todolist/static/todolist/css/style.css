@@ -3,5 +3,5 @@
 @tailwind utilities;
 .test_style {
     text-align: center;
-    color: lightgrey;
+    color: rgba(77, 77, 77, 0.527);
 }
