@@ -7,5 +7,10 @@ class Todo(models.Model):
     is_complete = models.BooleanField("Задание завершено",default=False)
     
 
+    class Meta:
+        verbose_name = "Задание"
+        verbose_name_plural = "Задания"
+
+
     def __str__(self):
         return self.title
