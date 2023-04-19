@@ -4,6 +4,7 @@ from django.db import models
 
 class Todo(models.Model):
     title = models.CharField("Название задания", max_length=550)
+    description = models.TextField("Описание задания",max_length=550)
     is_complete = models.BooleanField("Задание завершено",default=False)
    
 

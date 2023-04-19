@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.test_style {
+.main_stely {
     text-align: center;
     color: rgba(77, 77, 77, 0.527);
 }

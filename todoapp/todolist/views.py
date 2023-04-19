@@ -9,13 +9,15 @@ from .models import Todo
 
 def index(request):
     todos = Todo.objects.all()
-    return render(request, 'todoapp/index.html', {'todo_list':todos, 'title':'Главная страница'})
+    return render(request, 'todoapp/index.html', {'todo_list':todos, 'title':'Главная страница', 'todo_list':todos})
 
 
 @require_http_methods(['POST'])
 @csrf_exempt
 def add(request):
     title = request.POST['title']
+    description = request.POST['description']
+    description = Todo(description=description)
     todo = Todo(title=title)
     todo.save()
     return redirect('index')
