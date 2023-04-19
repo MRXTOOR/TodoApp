@@ -1,7 +1,8 @@
 {% extends 'todoapp/layout.html' %}
 {% block content %}
 
-{{ todos}}
-{{title}}
+{% for todo in  todo_list %}
+    {{todo.title}}
+{% endfor %}
 
 {% endblock content %}
